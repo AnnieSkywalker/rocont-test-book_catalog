@@ -9,7 +9,7 @@
 </template>
 
 <script setup>
-    import uiKitText from '../components/UiKit.vue/uiKitText.vue';
+    import uiKitText from '../components/UiKit/uiKitText.vue';
 </script>
 
 <style lang="css" scoped></style>

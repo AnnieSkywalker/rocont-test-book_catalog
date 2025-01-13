@@ -41,7 +41,7 @@
 <style lang="css" scoped>
     .label,
     a {
-        font-size: 10px;
+        font-size: 14px;
         color: var(--text);
         font-weight: 400;
         line-height: 10px;
@@ -72,8 +72,8 @@
     .custom-checkbox + label::before {
         content: '';
         display: inline-block;
-        width: 12px;
-        height: 12px;
+        width: 18px;
+        height: 18px;
         flex-shrink: 0;
         flex-grow: 0;
         border: 2px solid var(--border-checkbox);
