@@ -1,0 +1,24 @@
+:root{
+    /* This is a absolute white and black. */
+    --black-color: #000;
+    --white-color: #fff;
+
+    /* Primary Colors - The foundational color representing brand identity in this template */
+    --primary-color-10: #0F172A;
+    --primary-color-20: #707786;
+    --primary-color-30: #DDDFE4;
+    --primary-color-40: #F5F6F6;
+    --primary-color-50: #900B09;
+    --primary-color-60: #1C7D41;
+}
+
+:root.lite {
+    --background-color:        var(--white-color);
+    --background-footer:       var(--primary-color-10);
+
+    --background-color-ui-kit: var(--primary-color-10);
+
+    --text-title:              var(--primary-color-10);
+    --text:                  var(--primary-color-20);
+
+}
