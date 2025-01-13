@@ -1,27 +1,28 @@
 <template>
-    <div class="text-desktop">
-        <h1>H1 Заголовок</h1>
-        <p class="lead">Lead Название книги</p>
-        <p class="p-bold">p bold Лейбл инпута</p>
-        <p class="p">p Текст</p>
-        <p class="note">note Подпись у форм и чекбокс</p>
-    </div>
-
-    <div class="checkbox">
-        <h1>H1 Заголовок</h1>
-        <p class="lead">Lead Название книги</p>
-        <p class="p-bold">p bold Лейбл инпута</p>
-        <p class="p">p Текст</p>
-        <p class="note">note Подпись у форм и чекбокс</p>
+    <div>
+        <div class="text-desktop">
+            <h1>H1 Заголовок</h1>
+            <p class="lead">Lead Название книги</p>
+            <p class="p-bold">p bold Лейбл инпута</p>
+            <p class="p">p Текст</p>
+            <p class="note">note Подпись у форм и чекбокс</p>
+        </div>
+        <div>
+            <UiCheckbox
+                v-model="checked"
+                label="Я согласен с условиями "
+            ></UiCheckbox>
+        </div>
     </div>
 </template>
 
-<script></script>
+<script setup>
+    import UiCheckbox from '../Ui/UiCheckbox.vue';
+</script>
 
 <style lang="css" scoped>
     .text-desktop {
         width: 505px;
-        height: 430px;
         top: 228px;
         left: -2393px;
         gap: 0px;

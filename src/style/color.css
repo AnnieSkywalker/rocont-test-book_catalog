@@ -19,6 +19,10 @@
     --background-color-ui-kit: var(--primary-color-10);
 
     --text-title:              var(--primary-color-10);
-    --text:                  var(--primary-color-20);
+    --text:                    var(--primary-color-20);
 
+    --bc-checkbox:             var(--white-color);
+    --bc-checkbox-checked:     var(--primary-color-60);
+    --border-checkbox:         var(--primary-color-20);
+    --border-checkbox-checked: var(--primary-color-60)
 }
