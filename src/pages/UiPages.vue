@@ -1,9 +1,15 @@
 <template>
     <div>
         <h1>Ui kit</h1>
+        <nav>
+            <RouterLink to="/">home</RouterLink>
+        </nav>
+        <uiKitText />
     </div>
 </template>
 
-<script setup></script>
+<script setup>
+    import uiKitText from '../components/UiKit.vue/uiKitText.vue';
+</script>
 
 <style lang="css" scoped></style>
