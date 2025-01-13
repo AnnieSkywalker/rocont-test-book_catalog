@@ -15,9 +15,7 @@
 :root.lite {
     --background-color:        var(--white-color);
     --background-footer:       var(--primary-color-10);
-
     --background-color-header: var(--primary-color-40);
-
     --background-color-ui-kit: var(--primary-color-10);
 
     --text-title:              var(--primary-color-10);
@@ -26,5 +24,9 @@
     --bc-checkbox:             var(--white-color);
     --bc-checkbox-checked:     var(--primary-color-60);
     --border-checkbox:         var(--primary-color-20);
-    --border-checkbox-checked: var(--primary-color-60)
+    --border-checkbox-checked: var(--primary-color-60);
+
+    --bc-input-search:         var(--white-color);
+    --border-input-search:     var(--white-color);
+    --border-input-search-focus: var(--primary-color-20);
 }

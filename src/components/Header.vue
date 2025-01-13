@@ -3,10 +3,11 @@
         <div class="header__container">
             <div class="header__top">
                 <MyLogo></MyLogo>
-                <input
-                    class="header__search"
-                    type="text"
-                />
+                <UiInput
+                    :model-value="searchQuery"
+                    @update:modelValue="setSearchQuery"
+                    placeholder="Найти ту самую книгу"
+                ></UiInput>
             </div>
             <div class="header__bottom">
                 <span>книги в каталоге 4</span>
@@ -17,6 +18,7 @@
 </template>
 <script setup>
     import MyLogo from './icon/MyLogo.vue';
+    import UiInput from './Ui/UiInput.vue';
 </script>
 <style lang="css">
     .header {
