@@ -39,4 +39,17 @@
     .myInput:focus {
         border: 1px solid var(--border-input-search-focus);
     }
+    .input__form {
+        background-color: var(--bc-input-form);
+        border: var(--border-input-form);
+        padding: 10px 12px;
+    }
+    .input__margin-bottom {
+        margin-bottom: 20px;
+    }
+    .input__placeholder::placeholder {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+    }
 </style>

@@ -30,6 +30,9 @@
     --bc-input-search:         var(--white-color);
     --border-input-search:     var(--white-color);
     --border-input-search-focus: var(--primary-color-20);
+    --bc-input-form:         var(--primary-color-40);
+    --border-input-form:     var(--primary-color-40);
+    --border-input-form-focus: var(--primary-color-20);
 
     --button-text:             var(--white-color);
     --bc-button:               var(--primary-color-60);

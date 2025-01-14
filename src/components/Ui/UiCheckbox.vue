@@ -53,6 +53,7 @@
         display: flex;
         flex-direction: row;
         align-items: center;
+        margin-bottom: 16px;
     }
 
     .custom-checkbox {

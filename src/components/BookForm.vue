@@ -1,34 +1,60 @@
 <template>
     <form @submit.prevent>
+        <p class="title">Добавить книгу</p>
+        <p class="subtitle">Заполните все поля и добавьте книгу в список</p>
+        <label
+            class="label"
+            for="title"
+            >Название</label
+        >
         <UiInput
+            id="title"
             v-model="book.title"
             v-focus
             type="text"
-            placeholder="название"
-            class="input__margin-bottom"
+            placeholder="Название произведения"
+            class="input__form input__margin-bottom input__placeholder"
         >
         </UiInput>
+        <label
+            class="label"
+            for="author"
+            >Автор</label
+        >
         <UiInput
+            id="author"
             v-model="book.author"
             type="text"
-            placeholder="название"
-            class="input__margin-bottom"
+            placeholder="Имя и фамилия автора"
+            class="input__form input__margin-bottom input__placeholder"
         >
         </UiInput>
+        <label
+            class="label"
+            for="year"
+            >Год</label
+        >
         <UiInput
-            v-model="book.title"
+            id="year"
+            v-model="book.year"
             v-focus
             type="text"
-            placeholder="название"
-            class="input__margin-bottom"
+            placeholder="Год выпуска"
+            class="input__form input__margin-bottom input__placeholder"
         >
         </UiInput>
+        <label
+            class="label"
+            for="genre"
+            >Жанр</label
+        >
         <UiInput
-            v-model="book.title"
+            id="genre"
+            v-model="book.genre"
             v-focus
             type="text"
-            placeholder="название"
-            class="input__margin-bottom"
+            placeholder="Добавьте жанр произведения"
+            class="input__form input__margin-bottom input__placeholder"
         >
         </UiInput>
         <UiCheckbox
@@ -38,10 +64,10 @@
 
         <UiButton
             @click="createBook"
-            class="add"
+            class="add modal"
         >
             <MyIconPlus></MyIconPlus>
-            <p>Добавить книгу</p>
+            <p>Добавить</p>
         </UiButton>
     </form>
 </template>
@@ -67,37 +93,26 @@
 </script>
 
 <style lang="css" scoped>
-    .input__margin-bottom {
-        margin-bottom: 20px;
-    }
-
-    .myBtn {
-        font-style: normal;
+    .title {
+        font-size: 20px;
         font-weight: 600;
+        line-height: 20px;
+        color: var(--text-title);
+        margin-bottom: 8px;
+    }
+    .subtitle {
         font-size: 14px;
-        color: #ffffff;
-        box-sizing: border-box;
-        border: 1px solid var(--border-color);
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        padding: 14px 20px;
-        gap: 10px;
-        cursor: pointer;
-        height: 50px;
-        min-width: 150px;
-        flex: none;
-        flex-grow: 1;
+        font-weight: 400;
+        line-height: 21px;
+        color: var(--text);
+        margin-bottom: 16px;
     }
 
-    .myBtn.add {
-        padding: 0;
-        max-width: 875px;
-        min-width: 150px;
-        height: 50px;
-        border: 2px solid var(--primary);
-        border-radius: 2px;
-        cursor: pointer;
+    .label {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 21px;
+        color: var(--text-title);
+        margin-bottom: 8px;
     }
 </style>

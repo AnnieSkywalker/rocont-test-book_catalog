@@ -26,6 +26,13 @@
         background-color: var(--bc-button);
         border: 1px solid var(--border-button);
     }
+    .myBtn.add.modal {
+        margin-left: auto;
+        width: 114px;
+        height: 41px;
+        gap: 7px;
+        padding: 10px 12px;
+    }
 
     .myBtn.remove {
         background-color: var(--bc-button-remove);
@@ -38,5 +45,11 @@
         font-weight: 400;
         font-size: 16px;
         line-height: 24px;
+    }
+
+    .myBtn.add.modal,
+    p {
+        font-size: 14px;
+        line-height: 21px;
     }
 </style>
