@@ -4,8 +4,13 @@
             <p class="book__title">{{ book.title }}</p>
             <div class="book__wrap">
                 <p class="book__author">{{ book.author }}</p>
-                <p class="book__year">{{ book.year }}</p>
-                <p class="book__genre">{{ book.genre }}</p>
+                <p class="book__year">{{ book.publication_year }}</p>
+                <p
+                    class="book__genre"
+                    v-for="genre in book.genre"
+                >
+                    {{ genre }}
+                </p>
             </div>
         </div>
         <div class="book__btn">

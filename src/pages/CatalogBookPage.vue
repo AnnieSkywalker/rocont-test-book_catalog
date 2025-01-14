@@ -16,43 +16,40 @@
     import BookForm from '../components/BookForm.vue';
     import BooksList from '../components/BooksList.vue';
     import UiModal from '../components/Ui/UiModal.vue';
-    import { ref, reactive } from 'vue';
+    import { computed, onMounted, ref, reactive } from 'vue';
+    import { useStore } from 'vuex';
 
+    const store = useStore();
     let dialogVisible = ref(false);
 
-    function showVisible() {
-        dialogVisible.value = true;
-    }
-    function createBook(book) {
-        console.log('createBook');
-        console.log(book);
-        // posts.value.push(book);
-        dialogVisible.value = false;
-    }
+    const booksFetch = () => store.dispatch('books/booksFetch');
+    onMounted(() => booksFetch());
 
-    const books = reactive([
-        {
-            id: 1,
-            title: 'ea molestias quasi exercitationem fdsffd',
-            author: 'Ivanov Ivan',
-            year: 1998,
-            genre: 'horrors',
-        },
-        {
-            id: 2,
-            title: 'ea molestias quasi exercitationem fdsffd',
-            author: 'Ivanov Ivan',
-            year: 1998,
-            genre: 'horrors',
-        },
-        {
-            id: 3,
-            title: 'ea molestias quasi exercitationem fdsffd',
-            author: 'Ivanov Ivan',
-            year: 1998,
-            genre: 'horrors',
-        },
-    ]);
+    const books = computed(() => store.state.books.books);
+    // const selectedSort = computed(() => store.state.books.selectedSort);
+    // const searchQuery = computed(() => store.state.books.searchQuery);
+
+    // const sortedBook = computed(() => store.getters['books/sortedBook']);
+    // const sortedAndSearchedBook = computed(() => store.getters['books/sortedAndSearchedBook']);
+
+    const setBooks = payload => store.commit('books/setBooks', payload);
+    // const setSearchQuery = payload => store.commit('books/setSearchQuery', payload);
+    // const setSelectedSort = payload => store.commit('books/setSelectedSort', payload);
+
+    // function showVisible() {
+    //     dialogVisible.value = true;
+    // }
+
+    // function createBook(book) {
+    //     console.log('createBook');
+    //     console.log(book);
+    //     // posts.value.push(book);
+    //     dialogVisible.value = false;
+    // }
+
+    // function removeBook(book) {
+    //     return store.dispatch('Books/removeBook', book);
+    // }
 </script>
 
 <style lang="css" scoped></style>
