@@ -14,8 +14,6 @@
         align-items: center;
         gap: 12px;
         cursor: pointer;
-        /* flex: none;
-        flex-grow: 1; */
         padding: 12px 16px;
         border-radius: 8px;
     }
@@ -41,11 +39,4 @@
         font-size: 16px;
         line-height: 24px;
     }
-
-    /* .myBtn.open {
-        color: var(--primary);
-        border: 1px solid var(--primary);
-        background: none;
-        border-radius: 8px;
-    } */
 </style>

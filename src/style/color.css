@@ -16,6 +16,7 @@
     --background-color:        var(--white-color);
     --background-footer:       var(--primary-color-10);
     --background-color-header: var(--primary-color-40);
+    --background-color-footer: var(--primary-color-40);
     --background-color-ui-kit: var(--primary-color-10);
 
     --text-title:              var(--primary-color-10);
