@@ -42,9 +42,10 @@
     }
 
     .myModalContent {
-        padding: 25px;
+        padding: 32px;
         background-color: var(--background-color);
         border-radius: 16px;
+        max-width: 464px;
         min-width: 250px;
     }
 </style>

@@ -3,11 +3,14 @@
         <div class="header__container">
             <div class="header__top">
                 <MyLogo></MyLogo>
-                <UiInput
-                    :model-value="searchQuery"
-                    @update:modelValue="setSearchQuery"
-                    :placeholder="'Найти ту самую книгу'"
-                ></UiInput>
+                <div class="header__input-wrap">
+                    <MyIconSearch class="myIconSearch"></MyIconSearch>
+                    <UiInput
+                        :model-value="searchQuery"
+                        @update:modelValue="setSearchQuery"
+                        :placeholder="'Найти ту самую книгу'"
+                    ></UiInput>
+                </div>
             </div>
             <div class="header__bottom">
                 <p class="header__text">книги в каталоге <span class="header__quantity">3</span></p>
@@ -21,6 +24,7 @@
 </template>
 <script setup>
     import MyIconPlus from './icon/MyIconPlus.vue';
+    import MyIconSearch from './icon/MyIconSearch.vue';
     import MyLogo from './icon/MyLogo.vue';
     import UiButton from './Ui/UiButton.vue';
     import UiInput from './Ui/UiInput.vue';
@@ -28,14 +32,14 @@
 <style lang="css">
     .header {
         display: flex;
-        flex-direction: column;
-        width: 100%;
+        justify-content: center;
         background-color: var(--background-color-header);
     }
     .header__container {
         display: flex;
         flex-direction: column;
         gap: 16px;
+        width: 100%;
         max-width: 1024px;
         padding: 16px 40px;
     }
@@ -44,6 +48,10 @@
         display: flex;
         flex-direction: row;
         gap: 25px;
+    }
+    .header__input-wrap {
+        width: 100%;
+        position: relative;
     }
     .header__bottom {
         display: flex;
@@ -59,5 +67,10 @@
     }
     .header__quantity {
         color: var(--text);
+    }
+    .myIconSearch {
+        position: absolute;
+        top: 11px;
+        left: 10px;
     }
 </style>

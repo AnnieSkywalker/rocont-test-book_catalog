@@ -1,19 +1,15 @@
 <template>
-    <div class="myInput__wrapper">
-        <MyIconSearch class="myIconSearch"></MyIconSearch>
-        <input
-            :value="modelValue"
-            @input="updateInput"
-            class="myInput"
-            type="text"
-            :placeholder="placeholder"
-        />
-    </div>
+    <input
+        :value="modelValue"
+        @input="updateInput"
+        class="myInput"
+        type="text"
+        :placeholder="placeholder"
+    />
 </template>
 
 <script setup>
     import { defineEmits, defineProps } from 'vue';
-    import MyIconSearch from '../icon/MyIconSearch.vue';
 
     const { modelValue } = defineProps(['modelValue', 'placeholder']);
     const emit = defineEmits(['update:modelValue']);
@@ -24,10 +20,6 @@
 </script>
 
 <style lang="css" scoped>
-    .myInput__wrapper {
-        width: 100%;
-        position: relative;
-    }
     .myInput {
         width: 100%;
         border: 1px solid var(--border-input-search);
@@ -46,10 +38,5 @@
     }
     .myInput:focus {
         border: 1px solid var(--border-input-search-focus);
-    }
-    .myIconSearch {
-        position: absolute;
-        top: 11px;
-        left: 10px;
     }
 </style>
