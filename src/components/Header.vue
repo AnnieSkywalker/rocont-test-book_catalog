@@ -6,7 +6,7 @@
                 <UiInput
                     :model-value="searchQuery"
                     @update:modelValue="setSearchQuery"
-                    placeholder="Найти ту самую книгу"
+                    :placeholder="'Найти ту самую книгу'"
                 ></UiInput>
             </div>
             <div class="header__bottom">
@@ -36,6 +36,7 @@
         padding: 16px 40px;
     }
     .header__top {
+        width: 100%;
         display: flex;
         flex-direction: row;
         gap: 25px;

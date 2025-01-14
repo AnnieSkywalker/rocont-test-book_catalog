@@ -13,11 +13,23 @@
                 label="Я согласен с условиями "
             ></UiCheckbox>
         </div>
+        <div>
+            <UiButton class="add">
+                <MyIconPlus></MyIconPlus>
+                <p>Button</p>
+            </UiButton>
+            <UiButton class="remove">
+                <MyIconRemove></MyIconRemove>
+            </UiButton>
+        </div>
     </div>
 </template>
 
 <script setup>
     import UiCheckbox from '../Ui/UiCheckbox.vue';
+    import UiButton from '../Ui/UiButton.vue';
+    import MyIconPlus from '../icon/MyIconPlus.vue';
+    import MyIconRemove from '../icon/MyIconRemove.vue';
 </script>
 
 <style lang="css" scoped>

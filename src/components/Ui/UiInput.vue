@@ -6,6 +6,7 @@
             @input="updateInput"
             class="myInput"
             type="text"
+            :placeholder="placeholder"
         />
     </div>
 </template>
@@ -14,7 +15,7 @@
     import { defineEmits, defineProps } from 'vue';
     import MyIconSearch from '../icon/MyIconSearch.vue';
 
-    const { modelValue } = defineProps(['modelValue']);
+    const { modelValue } = defineProps(['modelValue', 'placeholder']);
     const emit = defineEmits(['update:modelValue']);
 
     const updateInput = event => {
@@ -24,6 +25,7 @@
 
 <style lang="css" scoped>
     .myInput__wrapper {
+        width: 100%;
         position: relative;
     }
     .myInput {
