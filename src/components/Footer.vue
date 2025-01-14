@@ -7,8 +7,16 @@
             <p class="footer__copyright">© {{ date }} Book Catalog</p>
             <p class="footer__discription">
                 "Это тестовое задание компании Rocont. Footer не входил в дизайн проект, используется как вспомогательный компонент"
-                <p style="cursor: pointer;" @click="$router.push('/ui')">UI Kit</p>
-                <p style="cursor: pointer;" @click="$router.push('/')">Book Catalog</p>
+                <span
+                    style="cursor: pointer"
+                    @click="$router.push('/ui')"
+                    >UI Kit</span
+                ><br />
+                <span
+                    style="cursor: pointer"
+                    @click="$router.push('/')"
+                    >Book Catalog</span
+                >
             </p>
         </div>
     </footer>

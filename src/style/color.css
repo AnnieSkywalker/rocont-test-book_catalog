@@ -36,4 +36,6 @@
     --border-button:           var(--primary-color-60);
     --bc-button-remove:        var(--primary-color-40);
     --border-button-remove:    var(--primary-color-40);
+
+    --bg-book-item:            var(--primary-color-40)
 }
