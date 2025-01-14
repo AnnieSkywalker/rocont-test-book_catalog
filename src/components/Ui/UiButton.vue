@@ -4,6 +4,7 @@
 
 <style lang="css" scoped>
     .myBtn {
+        width: fit-content;
         color: var(--button-text);
         box-sizing: border-box;
         border: 1px solid var(--border-button);
@@ -13,8 +14,8 @@
         align-items: center;
         gap: 12px;
         cursor: pointer;
-        flex: none;
-        flex-grow: 1;
+        /* flex: none;
+        flex-grow: 1; */
         padding: 12px 16px;
         border-radius: 8px;
     }

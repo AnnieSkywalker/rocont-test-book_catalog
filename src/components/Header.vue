@@ -10,14 +10,19 @@
                 ></UiInput>
             </div>
             <div class="header__bottom">
-                <span>книги в каталоге 4</span>
-                <button>добавить книги</button>
+                <p class="header__text">книги в каталоге <span class="header__quantity">3</span></p>
+                <UiButton class="add">
+                    <MyIconPlus></MyIconPlus>
+                    <p>Добавить книгу</p>
+                </UiButton>
             </div>
         </div>
     </header>
 </template>
 <script setup>
+    import MyIconPlus from './icon/MyIconPlus.vue';
     import MyLogo from './icon/MyLogo.vue';
+    import UiButton from './Ui/UiButton.vue';
     import UiInput from './Ui/UiInput.vue';
 </script>
 <style lang="css">
@@ -25,7 +30,6 @@
         display: flex;
         flex-direction: column;
         width: 100%;
-        height: 110px;
         background-color: var(--background-color-header);
     }
     .header__container {
@@ -40,5 +44,20 @@
         display: flex;
         flex-direction: row;
         gap: 25px;
+    }
+    .header__bottom {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .header__text {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 20px;
+        color: var(--text-title);
+    }
+    .header__quantity {
+        color: var(--text);
     }
 </style>
