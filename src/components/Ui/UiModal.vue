@@ -9,10 +9,15 @@
             class="myModalContent"
         >
             <slot></slot>
+            <MyIconClose
+                class="MyIconClose"
+                @click="hideModal"
+            ></MyIconClose>
         </div>
     </div>
 </template>
 <script setup>
+    import MyIconClose from '../icon/MyIconClose.vue';
     import { defineEmits, defineProps } from 'vue';
 
     const { show } = defineProps({
@@ -40,12 +45,17 @@
         left: 0;
         background: rgba(0, 0, 0, 0.1);
     }
-
     .myModalContent {
+        position: relative;
         padding: 32px;
         background-color: var(--background-color);
         border-radius: 16px;
         max-width: 464px;
         min-width: 250px;
+    }
+    .MyIconClose {
+        position: absolute;
+        top: 38px;
+        right: 38px;
     }
 </style>
