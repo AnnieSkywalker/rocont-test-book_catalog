@@ -3,6 +3,7 @@ import axios from 'axios';
 export const catalogBooksModule = {
     state: () => ({
         books: [],
+        isBooksLoading: false,
         modalVisible: false,
         selectedSort: '',
         searchQuery: '',
@@ -28,6 +29,9 @@ export const catalogBooksModule = {
         setModalVisible(state, modalVisible) {
             state.modalVisible = modalVisible;
         },
+        setLoading(state, bool) {
+            state.isBooksLoading = bool;
+        },
         // setSelectedSort(state, selectedSort) {
         //     state.selectedSort = selectedSort;
         // },
@@ -37,15 +41,14 @@ export const catalogBooksModule = {
     },
     actions: {
         async booksFetch(context) {
-            console.log(context);
             try {
+                context.commit('setLoading', true);
                 let response = await axios.get('https://www.freetestapi.com/api/v1/books?limit=5');
-                console.log(response);
                 context.commit('setBooks', response.data);
             } catch (e) {
                 console.log(e);
             } finally {
-                console.log('finally');
+                context.commit('setLoading', false);
             }
         },
         // removePost(context, payload) {

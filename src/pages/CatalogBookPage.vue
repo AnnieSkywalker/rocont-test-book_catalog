@@ -1,9 +1,11 @@
 <template>
     <div>
         <BooksList
+            v-if="!isBooksLoading"
             :books="books"
             @remove="removeBook"
         ></BooksList>
+        <UiLoader v-else></UiLoader>
 
         <UiModal>
             <BookForm @create="createBook"></BookForm>
@@ -15,6 +17,7 @@
     import BookForm from '../components/BookForm.vue';
     import BooksList from '../components/BooksList.vue';
     import UiModal from '../components/Ui/UiModal.vue';
+    import UiLoader from '../components/Ui/UiLoader.vue';
     import { computed, onMounted, ref, reactive } from 'vue';
     import { useStore } from 'vuex';
 
@@ -24,6 +27,7 @@
     onMounted(() => booksFetch());
 
     const books = computed(() => store.state.books.books);
+    const isBooksLoading = computed(() => store.state.books.isBooksLoading);
 
     // const selectedSort = computed(() => store.state.books.selectedSort);
     // const searchQuery = computed(() => store.state.books.searchQuery);
