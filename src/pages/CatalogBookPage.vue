@@ -36,16 +36,15 @@
     // const sortedAndSearchedBook = computed(() => store.getters['books/sortedAndSearchedBook']);
 
     const setBooks = payload => store.commit('books/setBooks', payload);
+    const setModalVisible = payload => store.commit('books/setModalVisible', payload);
 
     // const setSearchQuery = payload => store.commit('books/setSearchQuery', payload);
     // const setSelectedSort = payload => store.commit('books/setSelectedSort', payload);
 
-    // function createBook(book) {
-    //     console.log('createBook');
-    //     console.log(book);
-    //     // posts.value.push(book);
-    //     dialogVisible.value = false;
-    // }
+    function createBook(book) {
+        books.value.push(book);
+        setModalVisible(false);
+    }
 
     // function removeBook(book) {
     //     return store.dispatch('Books/removeBook', book);

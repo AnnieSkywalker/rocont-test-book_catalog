@@ -36,7 +36,7 @@
         >
         <UiInput
             id="year"
-            v-model="book.year"
+            v-model="book.publication_year"
             v-focus
             type="text"
             placeholder="Год выпуска"
@@ -80,14 +80,16 @@
     import MyIconPlus from './icon/MyIconPlus.vue';
 
     const emit = defineEmits({ create: 'create' });
-    let book = reactive({ title: '', body: '' });
+    let book = reactive({ title: '', author: '', publication_year: '', genre: '' });
 
     const createBook = () => {
         book.id = Date.now();
         emit('create', book);
         book = {
             title: '',
-            body: '',
+            author: '',
+            publication_year: '',
+            genre: '',
         };
     };
 </script>

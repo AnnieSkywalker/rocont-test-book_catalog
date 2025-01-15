@@ -55,5 +55,6 @@
         position: absolute;
         top: 38px;
         right: 38px;
+        cursor: pointer;
     }
 </style>
