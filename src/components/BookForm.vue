@@ -1,7 +1,7 @@
 <template>
+    <p class="title">Добавить книгу</p>
+    <p class="subtitle">Заполните все поля и добавьте книгу в список</p>
     <form @submit.prevent>
-        <p class="title">Добавить книгу</p>
-        <p class="subtitle">Заполните все поля и добавьте книгу в список</p>
         <label
             class="label"
             for="title"
@@ -37,7 +37,6 @@
         <UiInput
             id="year"
             v-model="book.publication_year"
-            v-focus
             type="text"
             placeholder="Год выпуска"
             class="input__form input__margin-bottom input__placeholder"
@@ -51,7 +50,6 @@
         <UiInput
             id="genre"
             v-model="book.genre"
-            v-focus
             type="text"
             placeholder="Добавьте жанр произведения"
             class="input__form input__margin-bottom input__placeholder"
@@ -61,15 +59,14 @@
             v-model="checked"
             label="Я согласен с условиями "
         ></UiCheckbox>
-
-        <UiButton
-            @click="createBook"
-            class="add modal"
-        >
-            <MyIconPlus></MyIconPlus>
-            <p>Добавить</p>
-        </UiButton>
     </form>
+    <UiButton
+        @click="createBook"
+        class="add modal"
+    >
+        <MyIconPlus></MyIconPlus>
+        <p>Добавить</p>
+    </UiButton>
 </template>
 
 <script setup>

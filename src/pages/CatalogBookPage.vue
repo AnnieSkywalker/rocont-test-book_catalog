@@ -18,7 +18,7 @@
     import BooksList from '../components/BooksList.vue';
     import UiModal from '../components/Ui/UiModal.vue';
     import UiLoader from '../components/Ui/UiLoader.vue';
-    import { computed, onMounted, ref, reactive } from 'vue';
+    import { computed, onMounted } from 'vue';
     import { useStore } from 'vuex';
 
     const store = useStore();
