@@ -39,8 +39,10 @@
     const store = useStore();
 
     const books = computed(() => store.state.books.books);
+    const searchQuery = computed(() => store.state.books.searchQuery);
 
     const setModalVisible = payload => store.commit('books/setModalVisible', payload);
+    const setSearchQuery = payload => store.commit('books/setSearchQuery', payload);
 
     function showVisible() {
         setModalVisible(true);

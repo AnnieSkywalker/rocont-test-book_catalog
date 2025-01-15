@@ -5,22 +5,15 @@ export const catalogBooksModule = {
         books: [],
         isBooksLoading: false,
         modalVisible: false,
-        selectedSort: '',
         searchQuery: '',
         limit: 10,
     }),
     getters: {
-        // sortedBook(state) {
-        //     return [...state.posts].sort((post1, post2) => {
-        //         return post1[state.selectedSort]?.localeCompare(post2[state.selectedSort]);
-        //     });
-        // },
-        // sortedAndSearchedBook(state) {
-        //     console.log(state);
-        //     return getters.sortedPost.filter(post => {
-        //         return post.title.toLowerCase().includes(state.searchQuery.toLowerCase());
-        //     });
-        // },
+        searchedBook(state) {
+            return [...state.books].filter(book => {
+                return book.title.toLowerCase().includes(state.searchQuery.toLowerCase());
+            });
+        },
     },
     mutations: {
         setBooks(state, books) {
@@ -32,12 +25,10 @@ export const catalogBooksModule = {
         setLoading(state, bool) {
             state.isBooksLoading = bool;
         },
-        // setSelectedSort(state, selectedSort) {
-        //     state.selectedSort = selectedSort;
-        // },
-        // setSearchQuery(state, searchQuery) {
-        //     state.searchQuery = searchQuery;
-        // },
+        setSearchQuery(state, searchQuery) {
+            console.log('mutation');
+            state.searchQuery = searchQuery;
+        },
     },
     actions: {
         async booksFetch(context) {

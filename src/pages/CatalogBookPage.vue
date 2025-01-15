@@ -2,7 +2,7 @@
     <div>
         <BooksList
             v-if="!isBooksLoading"
-            :books="books"
+            :books="searchedBook"
             @remove="removeBook"
         ></BooksList>
         <UiLoader v-else></UiLoader>
@@ -29,17 +29,10 @@
     const books = computed(() => store.state.books.books);
     const isBooksLoading = computed(() => store.state.books.isBooksLoading);
 
-    // const selectedSort = computed(() => store.state.books.selectedSort);
-    // const searchQuery = computed(() => store.state.books.searchQuery);
-
-    // const sortedBook = computed(() => store.getters['books/sortedBook']);
-    // const sortedAndSearchedBook = computed(() => store.getters['books/sortedAndSearchedBook']);
+    const searchedBook = computed(() => store.getters['books/searchedBook']);
 
     const setBooks = payload => store.commit('books/setBooks', payload);
     const setModalVisible = payload => store.commit('books/setModalVisible', payload);
-
-    // const setSearchQuery = payload => store.commit('books/setSearchQuery', payload);
-    // const setSelectedSort = payload => store.commit('books/setSelectedSort', payload);
 
     function createBook(book) {
         books.value.push(book);
