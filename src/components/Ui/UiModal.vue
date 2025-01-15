@@ -1,7 +1,7 @@
 <template>
     <div
         class="myModal"
-        v-if="show"
+        v-if="modalVisible"
         @click.stop="hideModal"
     >
         <div
@@ -18,18 +18,16 @@
 </template>
 <script setup>
     import MyIconClose from '../icon/MyIconClose.vue';
-    import { defineEmits, defineProps } from 'vue';
+    import { computed } from 'vue';
+    import { useStore } from 'vuex';
 
-    const { show } = defineProps({
-        show: {
-            type: Boolean,
-            default: false,
-        },
-    });
-    const emit = defineEmits(['update:show']);
+    const store = useStore();
+
+    const modalVisible = computed(() => store.state.books.modalVisible);
+    const setModalVisible = payload => store.commit('books/setModalVisible', payload);
 
     const hideModal = () => {
-        emit('update:show', false);
+        setModalVisible(false);
     };
 </script>
 

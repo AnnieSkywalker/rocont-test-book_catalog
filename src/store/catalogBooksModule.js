@@ -3,6 +3,7 @@ import axios from 'axios';
 export const catalogBooksModule = {
     state: () => ({
         books: [],
+        modalVisible: false,
         selectedSort: '',
         searchQuery: '',
         limit: 10,
@@ -23,6 +24,9 @@ export const catalogBooksModule = {
     mutations: {
         setBooks(state, books) {
             state.books = books;
+        },
+        setModalVisible(state, modalVisible) {
+            state.modalVisible = modalVisible;
         },
         // setSelectedSort(state, selectedSort) {
         //     state.selectedSort = selectedSort;

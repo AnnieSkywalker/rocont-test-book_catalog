@@ -13,8 +13,13 @@
                 </div>
             </div>
             <div class="header__bottom">
-                <p class="header__text">книги в каталоге <span class="header__quantity">3</span></p>
-                <UiButton class="add">
+                <p class="header__text">
+                    книги в каталоге <span class="header__quantity">{{ books.length }}</span>
+                </p>
+                <UiButton
+                    class="add"
+                    @click="showVisible"
+                >
                     <MyIconPlus></MyIconPlus>
                     <p>Добавить книгу</p>
                 </UiButton>
@@ -28,6 +33,18 @@
     import MyLogo from './icon/MyLogo.vue';
     import UiButton from './Ui/UiButton.vue';
     import UiInput from './Ui/UiInput.vue';
+    import { computed } from 'vue';
+    import { useStore } from 'vuex';
+
+    const store = useStore();
+
+    const books = computed(() => store.state.books.books);
+
+    const setModalVisible = payload => store.commit('books/setModalVisible', payload);
+
+    function showVisible() {
+        setModalVisible(true);
+    }
 </script>
 <style lang="css">
     .header {

@@ -1,12 +1,11 @@
 <template>
     <div>
-        <button @click="showVisible">modal</button>
         <BooksList
             :books="books"
             @remove="removeBook"
         ></BooksList>
 
-        <UiModal v-model:show="dialogVisible">
+        <UiModal>
             <BookForm @create="createBook"></BookForm>
         </UiModal>
     </div>
@@ -20,12 +19,12 @@
     import { useStore } from 'vuex';
 
     const store = useStore();
-    let dialogVisible = ref(false);
 
     const booksFetch = () => store.dispatch('books/booksFetch');
     onMounted(() => booksFetch());
 
     const books = computed(() => store.state.books.books);
+
     // const selectedSort = computed(() => store.state.books.selectedSort);
     // const searchQuery = computed(() => store.state.books.searchQuery);
 
@@ -33,12 +32,9 @@
     // const sortedAndSearchedBook = computed(() => store.getters['books/sortedAndSearchedBook']);
 
     const setBooks = payload => store.commit('books/setBooks', payload);
+
     // const setSearchQuery = payload => store.commit('books/setSearchQuery', payload);
     // const setSelectedSort = payload => store.commit('books/setSelectedSort', payload);
-
-    // function showVisible() {
-    //     dialogVisible.value = true;
-    // }
 
     // function createBook(book) {
     //     console.log('createBook');
