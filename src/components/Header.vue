@@ -13,7 +13,10 @@
                 </div>
             </div>
             <div class="header__bottom">
-                <p class="header__text">
+                <p
+                    class="header__text"
+                    @click="$router.push('/')"
+                >
                     книги в каталоге <span class="header__quantity">{{ books.length }}</span>
                 </p>
                 <UiButton
@@ -79,10 +82,14 @@
         justify-content: space-between;
     }
     .header__text {
+        cursor: pointer;
         font-size: 20px;
         font-weight: 600;
         line-height: 20px;
         color: var(--text-title);
+    }
+    .header__text:hover {
+        opacity: 0.8;
     }
     .header__quantity {
         color: var(--text);

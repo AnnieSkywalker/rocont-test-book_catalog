@@ -41,7 +41,6 @@
     }
     .input__form {
         background-color: var(--bc-input-form);
-        border: var(--border-input-form);
         padding: 10px 12px;
     }
     .input__placeholder::placeholder {

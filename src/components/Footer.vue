@@ -9,11 +9,6 @@
                 "Это тестовое задание компании Rocont. Footer не входил в дизайн проект, используется как вспомогательный компонент"<br />
                 <span
                     style="cursor: pointer"
-                    @click="$router.push('/ui')"
-                    >UI Kit</span
-                ><br />
-                <span
-                    style="cursor: pointer"
                     @click="$router.push('/')"
                     >Book Catalog</span
                 >

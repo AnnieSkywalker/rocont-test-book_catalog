@@ -1,5 +1,4 @@
 import CatalogBookPage from '../pages/CatalogBookPage.vue';
-import UiPage from '../pages/UiPages.vue';
 import PrivacyPolicyPage from '../pages/PrivacyPolicyPage.vue';
 import { createRouter, createMemoryHistory } from 'vue-router';
 
@@ -11,10 +10,6 @@ const routes = [
     {
         path: '/privacy-policy',
         component: PrivacyPolicyPage,
-    },
-    {
-        path: '/ui',
-        component: UiPage,
     },
 ];
 
