@@ -32,7 +32,7 @@
     --border-input-search-focus: var(--primary-color-20);
     --bc-input-form:         var(--primary-color-40);
     --border-input-form:     var(--primary-color-40);
-    --border-input-form-focus: var(--primary-color-20);
+    --border-input-form-focus: var(--primary-color-60);
 
     --button-text:             var(--white-color);
     --bc-button:               var(--primary-color-60);
@@ -44,4 +44,6 @@
 
     --bg-loading:              var(--primary-color-30);
     --loading:                 var(--primary-color-20);
+
+    --error:                   var(--primary-color-50);
 }

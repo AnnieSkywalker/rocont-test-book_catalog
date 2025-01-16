@@ -14,14 +14,20 @@
             </div>
         </div>
         <div class="book__btn">
-            <MyIconEdit></MyIconEdit>
+            <MyIconEdit @click="editBook(book)"></MyIconEdit>
         </div>
     </section>
 </template>
 
 <script setup>
-    import { defineProps } from 'vue';
+    import { computed, defineProps } from 'vue';
     import MyIconEdit from './icon/MyIconEdit.vue';
+    import { useStore } from 'vuex';
+
+    const store = useStore();
+
+    const books = computed(() => store.state.books.books);
+    const setModalVisible = payload => store.commit('books/setModalVisible', payload);
 
     const { book, index } = defineProps({
         book: {
@@ -33,6 +39,10 @@
             required: true,
         },
     });
+    function editBook(book) {
+        console.log(book);
+        setModalVisible(true);
+    }
 </script>
 
 <style lang="css" scoped>

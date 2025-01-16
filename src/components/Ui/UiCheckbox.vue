@@ -4,9 +4,8 @@
             id="myCheckbox"
             class="custom-checkbox"
             type="checkbox"
-            :checked="isChecked"
-            :value="value"
-            @change="updateInput"
+            :checked="modelValue"
+            @change="toggleCheckbox"
         />
         <label
             for="myCheckbox"
@@ -21,15 +20,12 @@
 <script setup>
     import { defineProps } from 'vue';
 
-    const { value, modelValue, label, trueValue, falseValue } = defineProps({
-        value: {
-            type: String,
+    const { modelValue, label } = defineProps({
+        modelValue: {
+            type: Boolean,
             required: true,
         },
-        modelValue: { default: '' },
         label: { type: String },
-        trueValue: { default: true },
-        falseValue: { default: false },
     });
 
     const emit = defineEmits(['update:modelValue']);
