@@ -41,6 +41,7 @@
 <style lang="css" scoped>
     .label,
     a {
+        white-space: nowrap;
         font-size: 14px;
         color: var(--text);
         font-weight: 400;
@@ -51,11 +52,19 @@
     }
     .container {
         display: flex;
+        flex-wrap: wrap;
         flex-direction: row;
         align-items: center;
         margin-bottom: 16px;
     }
-
+    @media screen and (max-width: 479px) {
+        .container {
+            gap: 10px;
+        }
+        a {
+            margin-left: 32px;
+        }
+    }
     .custom-checkbox {
         position: absolute;
         z-index: -1;
