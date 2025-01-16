@@ -31,13 +31,13 @@
     </header>
 </template>
 <script setup>
+    import { computed } from 'vue';
+    import { useStore } from 'vuex';
     import MyIconPlus from './icon/MyIconPlus.vue';
     import MyIconSearch from './icon/MyIconSearch.vue';
     import MyLogo from './icon/MyLogo.vue';
     import UiButton from './Ui/UiButton.vue';
     import UiInput from './Ui/UiInput.vue';
-    import { computed } from 'vue';
-    import { useStore } from 'vuex';
 
     const store = useStore();
 
@@ -65,6 +65,25 @@
         max-width: 1024px;
         padding: 16px 40px;
     }
+    @media screen and (max-width: 767px) {
+        .header__container {
+            max-width: 768px;
+            padding: 16px 72px;
+        }
+    }
+    @media screen and (max-width: 479px) {
+        .header__container {
+            max-width: 768px;
+            padding: 16px 28px;
+        }
+    }
+    @media screen and (max-width: 319px) {
+        .header__container {
+            max-width: 768px;
+            padding: 16px 20px;
+        }
+    }
+
     .header__top {
         width: 100%;
         display: flex;

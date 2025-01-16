@@ -18,3 +18,10 @@
     import Header from './components/Header.vue';
     import Footer from './components/Footer.vue';
 </script>
+
+<style lang="css">
+    .app {
+        display: flex;
+        justify-content: center;
+    }
+</style>

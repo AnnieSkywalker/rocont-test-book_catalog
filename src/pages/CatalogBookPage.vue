@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="catalog">
         <BooksList
             v-if="!isBooksLoading"
             :books="searchedBook"
@@ -44,4 +44,28 @@
     // }
 </script>
 
-<style lang="css" scoped></style>
+<style lang="css" scoped>
+    .catalog {
+        padding: 16px 40px;
+        width: 100%;
+        max-width: 1024px;
+    }
+    @media screen and (max-width: 767px) {
+        .catalog {
+            max-width: 768px;
+            padding: 16px 72px;
+        }
+    }
+    @media screen and (max-width: 479px) {
+        .catalog {
+            max-width: 768px;
+            padding: 16px 28px;
+        }
+    }
+    @media screen and (max-width: 319px) {
+        .catalog {
+            max-width: 768px;
+            padding: 16px 20px;
+        }
+    }
+</style>

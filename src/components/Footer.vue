@@ -40,15 +40,36 @@
 
 <style lang="css" scoped>
     .footer {
-        padding: 0 19px;
         width: 100%;
         display: flex;
-        justify-content: flex-start;
+        justify-content: center;
         box-sizing: border-box;
         background-color: var(--background-color-footer);
     }
     .footer__container {
+        display: flex;
+        flex-direction: column;
         width: 100%;
+        max-width: 1024px;
+        padding: 16px 40px;
+    }
+    @media screen and (max-width: 767px) {
+        .footer__container {
+            max-width: 768px;
+            padding: 16px 72px;
+        }
+    }
+    @media screen and (max-width: 479px) {
+        .footer__container {
+            max-width: 768px;
+            padding: 16px 28px;
+        }
+    }
+    @media screen and (max-width: 319px) {
+        .footer__container {
+            max-width: 768px;
+            padding: 16px 20px;
+        }
     }
     .footer__copyright {
         margin: 0;

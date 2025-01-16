@@ -30,9 +30,6 @@
 </script>
 
 <style lang="css" scoped>
-    .books {
-        padding: 16px 40px;
-    }
     .books__wrapper {
         display: flex;
         flex-direction: column;
