@@ -21,6 +21,7 @@
 
     --text-title:              var(--primary-color-10);
     --text:                    var(--primary-color-20);
+    --text-notification:       var(--white-color);
 
     --bc-checkbox:             var(--white-color);
     --bc-checkbox-checked:     var(--primary-color-60);
@@ -46,4 +47,8 @@
     --loading:                 var(--primary-color-20);
 
     --error:                   var(--primary-color-50);
+
+    --notification-error:         var(--primary-color-50);
+
+    --notification-success:         var(--primary-color-60);
 }

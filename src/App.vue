@@ -9,17 +9,19 @@
                 <RouterView></RouterView>
             </div>
         </main>
+        <UiNotification></UiNotification>
         <Footer></Footer>
     </div>
 </template>
 
 <script setup>
     import { RouterView } from 'vue-router';
-    import Header from './components/Header.vue';
     import Footer from './components/Footer.vue';
+    import Header from './components/Header.vue';
+    import UiNotification from './components/Ui/UiNotification.vue';
 </script>
 
-<style lang="css" scoped>
+<style lang="css">
     .app {
         display: flex;
         justify-content: center;

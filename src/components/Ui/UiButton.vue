@@ -29,6 +29,7 @@
             left: 16px;
             right: 16px;
             width: auto;
+            padding: 10px 12px;
         }
     }
     @media screen and (max-width: 319px) {
@@ -52,11 +53,6 @@
             height: auto;
         }
     }
-    /* @media screen and (max-width: 319px) {
-        .myBtn.add {
-        }
-    } */
-
     .myBtn.remove {
         background-color: var(--bc-button-remove);
         border: 1px solid var(--border-button-remove);

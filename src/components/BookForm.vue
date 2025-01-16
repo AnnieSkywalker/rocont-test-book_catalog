@@ -119,6 +119,9 @@
     import UiCheckbox from './Ui/UiCheckbox.vue';
     import UiInput from './Ui/UiInput.vue';
     import MyIconPlus from './icon/MyIconPlus.vue';
+    import { useNotification } from '@kyvg/vue3-notification';
+
+    const { notify } = useNotification();
 
     let checked = ref(true);
 
@@ -136,18 +139,37 @@
     const emit = defineEmits({ create: 'create' });
 
     async function createBook() {
+        const id = Date.now();
         const result = await v$.value.$validate();
 
         if (!result) {
+            notify({
+                id,
+                type: 'error',
+                title: 'Книга не добавлена',
+                duration: 5000,
+            });
             return;
         }
 
         if (!checked.value) {
+            notify({
+                id,
+                type: 'error',
+                title: 'Книга не добавлена',
+                duration: 5000,
+            });
             return;
         }
 
         book.id = Date.now();
         emit('create', book);
+        notify({
+            id,
+            type: 'success',
+            title: 'Добавление книги',
+            duration: 4000,
+        });
         book = {
             title: '',
             author: '',
