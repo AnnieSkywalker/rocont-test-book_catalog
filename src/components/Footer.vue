@@ -6,7 +6,7 @@
         <div class="footer__container">
             <p class="footer__copyright">© {{ date }} Book Catalog</p>
             <p class="footer__discription">
-                "Это тестовое задание компании Rocont. Footer не входил в дизайн проект, используется как вспомогательный компонент"
+                "Это тестовое задание компании Rocont. Footer не входил в дизайн проект, используется как вспомогательный компонент"<br />
                 <span
                     style="cursor: pointer"
                     @click="$router.push('/ui')"
@@ -16,6 +16,12 @@
                     style="cursor: pointer"
                     @click="$router.push('/')"
                     >Book Catalog</span
+                >
+                <br />
+                <span
+                    style="cursor: pointer"
+                    @click="$router.push('/privacy-policy')"
+                    >Privacy Policy</span
                 >
             </p>
         </div>

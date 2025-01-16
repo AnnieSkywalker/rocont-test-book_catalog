@@ -13,7 +13,11 @@
         >
             {{ label }}
         </label>
-        <a href="#">Политики конфиденциальности</a>
+        <a
+            href="#"
+            @click="$router.push('/privacy-policy')"
+            >Политики конфиденциальности</a
+        >
     </div>
 </template>
 
