@@ -51,4 +51,8 @@
     --notification-error:         var(--primary-color-50);
 
     --notification-success:         var(--primary-color-60);
+
+    --icon-remove:              var(--primary-color-20);
+    --icon-remove-hover:        var(--primary-color-50);
+    --icon-remove-active:       var(--primary-color-50);
 }

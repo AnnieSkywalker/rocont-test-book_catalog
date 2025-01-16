@@ -26,7 +26,6 @@ export const catalogBooksModule = {
             state.isBooksLoading = bool;
         },
         setSearchQuery(state, searchQuery) {
-            console.log('mutation');
             state.searchQuery = searchQuery;
         },
     },
@@ -42,12 +41,12 @@ export const catalogBooksModule = {
                 context.commit('setLoading', false);
             }
         },
-        // removePost(context, payload) {
-        //     context.commit(
-        //         'setPosts',
-        //         context.state.posts.filter(p => p.id !== payload.id),
-        //     );
-        // },
+        removeBook(context, payload) {
+            context.commit(
+                'setBooks',
+                context.state.books.filter(p => p.id !== payload.id),
+            );
+        },
     },
     namespaced: true,
 };

@@ -14,14 +14,14 @@
             </div>
         </div>
         <div class="book__btn">
-            <MyIconEdit @click="editBook(book)"></MyIconEdit>
+            <MyIconRemove @click="removeBook(book)"></MyIconRemove>
         </div>
     </section>
 </template>
 
 <script setup>
     import { computed, defineProps } from 'vue';
-    import MyIconEdit from './icon/MyIconEdit.vue';
+    import MyIconRemove from './icon/MyIconRemove.vue';
     import { useStore } from 'vuex';
 
     const store = useStore();
@@ -39,9 +39,8 @@
             required: true,
         },
     });
-    function editBook(book) {
-        console.log(book);
-        setModalVisible(true);
+    function removeBook(book) {
+        return store.dispatch('books/removeBook', book);
     }
 </script>
 
