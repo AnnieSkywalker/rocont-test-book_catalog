@@ -19,7 +19,7 @@
     import Footer from './components/Footer.vue';
 </script>
 
-<style lang="css">
+<style lang="css" scoped>
     .app {
         display: flex;
         justify-content: center;

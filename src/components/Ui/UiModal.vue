@@ -31,7 +31,7 @@
     };
 </script>
 
-<style scoped>
+<style lang="css" scoped>
     .myModal {
         display: flex;
         justify-content: center;

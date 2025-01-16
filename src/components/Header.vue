@@ -51,7 +51,7 @@
         setModalVisible(true);
     }
 </script>
-<style lang="css">
+<style lang="css" scoped>
     .header {
         display: flex;
         justify-content: center;

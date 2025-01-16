@@ -7,7 +7,7 @@
 <script setup>
     import MyPrivacyPolicy from '../components/icon/MyPrivacyPolicy.vue';
 </script>
-<style lang="css">
+<style lang="css" scoped>
     .policy {
         width: 100%;
         display: flex;
