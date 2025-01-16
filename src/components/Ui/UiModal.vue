@@ -17,9 +17,9 @@
     </div>
 </template>
 <script setup>
-    import MyIconClose from '../icon/MyIconClose.vue';
     import { computed } from 'vue';
     import { useStore } from 'vuex';
+    import MyIconClose from '../icon/MyIconClose.vue';
 
     const store = useStore();
 
@@ -49,12 +49,32 @@
         background-color: var(--background-color);
         border-radius: 16px;
         max-width: 464px;
-        min-width: 250px;
+    }
+    @media screen and (max-width: 479px) {
+        .myModalContent {
+            width: 100%;
+            height: -webkit-fill-available;
+            max-width: none;
+            min-width: none;
+            border-radius: 0;
+            padding: 28px;
+        }
+    }
+    @media screen and (max-width: 319px) {
+        .myModalContent {
+            padding: 20px;
+        }
     }
     .MyIconClose {
         position: absolute;
         top: 38px;
         right: 38px;
         cursor: pointer;
+    }
+    @media screen and (max-width: 479px) {
+        .MyIconClose {
+            top: 16px;
+            right: 16px;
+        }
     }
 </style>

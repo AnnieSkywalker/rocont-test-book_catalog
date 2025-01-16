@@ -18,13 +18,25 @@
         border-radius: 8px;
     }
 
-    .myBtn:hover {
-        opacity: 0.8;
-    }
-
     .myBtn.add {
         background-color: var(--bc-button);
         border: 1px solid var(--border-button);
+    }
+    @media screen and (max-width: 479px) {
+        .myBtn.add {
+            position: fixed;
+            bottom: 16px;
+            left: 16px;
+            right: 16px;
+            width: auto;
+        }
+    }
+    @media screen and (max-width: 319px) {
+        .myBtn.add {
+            bottom: 8px;
+            left: 8px;
+            right: 8px;
+        }
     }
     .myBtn.add.modal {
         margin-left: auto;
@@ -33,6 +45,17 @@
         gap: 7px;
         padding: 10px 12px;
     }
+    @media screen and (max-width: 479px) {
+        .myBtn.add.modal {
+            position: static;
+            width: 100%;
+            height: auto;
+        }
+    }
+    /* @media screen and (max-width: 319px) {
+        .myBtn.add {
+        }
+    } */
 
     .myBtn.remove {
         background-color: var(--bc-button-remove);
@@ -41,6 +64,7 @@
 
     .myBtn,
     p {
+        white-space: nowrap;
         font-style: normal;
         font-weight: 400;
         font-size: 16px;

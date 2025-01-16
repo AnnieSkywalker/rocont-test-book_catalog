@@ -13,12 +13,12 @@
                 ></BooksItem>
             </TransitionGroup>
         </div>
-        <h2
+        <p
             v-else
             class="section-title"
         >
             По вашему запросу ничего не найдено
-        </h2>
+        </p>
     </section>
 </template>
 
@@ -30,6 +30,12 @@
 </script>
 
 <style lang="css" scoped>
+    .section-title {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19.2px;
+        color: var(--text);
+    }
     .books__wrapper {
         display: flex;
         flex-direction: column;
