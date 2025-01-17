@@ -4,7 +4,7 @@
             class="books__wrapper"
             v-if="books.length > 0"
         >
-            <TransitionGroup name="books-list">
+            <TransitionGroup name="book-list">
                 <BooksItem
                     v-for="(book, index) in books"
                     :book="book"

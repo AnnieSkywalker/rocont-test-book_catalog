@@ -94,10 +94,7 @@
         font-weight: 400;
         font-size: 14px;
         line-height: 150%;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
+        word-break: break-word;
     }
     .book__content {
         display: flex;
@@ -110,6 +107,7 @@
     .book__wrap {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         gap: 16px;
     }
 
@@ -118,10 +116,7 @@
         font-weight: 400;
         line-height: 19.2px;
         color: var(--text-title);
-        display: -webkit-box;
-        -webkit-line-clamp: 1;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
+        word-break: break-word;
     }
     .book__author,
     .book__genre,
