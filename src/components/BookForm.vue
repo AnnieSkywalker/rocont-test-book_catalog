@@ -141,7 +141,6 @@
     async function createBook() {
         const id = Date.now();
         const result = await v$.value.$validate();
-        console.log(v$.value);
 
         if (!result) {
             notify({
@@ -164,7 +163,6 @@
         }
 
         book.id = Date.now();
-        console.log(book);
         emit('create', book);
         notify({
             id,
