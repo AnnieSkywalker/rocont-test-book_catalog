@@ -76,4 +76,12 @@
     .my-notification.error {
         background-color: var(--notification-error);
     }
+
+    .my-notification:hover {
+        opacity: 0.9;
+        cursor: pointer;
+    }
+    .my-notification:active {
+        opacity: 0.9;
+    }
 </style>

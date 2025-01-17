@@ -13,9 +13,17 @@
         justify-content: center;
         align-items: center;
         gap: 12px;
-        cursor: pointer;
         padding: 12px 16px;
         border-radius: 8px;
+    }
+
+    .myBtn:hover {
+        opacity: 0.9;
+        cursor: pointer;
+    }
+
+    .myBtn:active {
+        opacity: 0.9;
     }
 
     .myBtn.add {
