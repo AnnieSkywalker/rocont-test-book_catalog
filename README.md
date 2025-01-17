@@ -21,7 +21,8 @@ vuelidate библиотека для валидации форм.
 Используется стороннее [API](https://www.freetestapi.com/).
 
 - [VUE (Composition API)](https://ru.vuejs.org/)
-- [Vite] (https://vite.dev/)
+- [Vuex](https://vuex.vuejs.org/)
+- [Vite](https://vite.dev/)
 - [CSS](https://www.w3schools.com/css/)
 - [JS](https://learn.javascript.ru/)
 - [Vue.js Notification](https://kyvg.github.io/vue3-notification/)
