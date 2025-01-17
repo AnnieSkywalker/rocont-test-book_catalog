@@ -1,7 +1,8 @@
 # **Book Catalog**
 
 Это тестовое задание компании Rocont, для проверки моих навыков.
-[Book Catalog](https://github.com/AnnieSkywalker/rocont-test-book_catalog)
+[Book Catalog](https://annieskywalker.github.io/rocont-test-book_catalog/)
+[git Book Catalog](https://github.com/AnnieSkywalker/rocont-test-book_catalog)
 
 ## Содержание
 
