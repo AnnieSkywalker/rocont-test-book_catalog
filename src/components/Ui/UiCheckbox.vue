@@ -15,7 +15,7 @@
         </label>
         <a
             href="#"
-            @click="$router.push('/privacy-policy')"
+            @click="addNotification"
             >Политики конфиденциальности</a
         >
     </div>
@@ -23,6 +23,9 @@
 
 <script setup>
     import { defineProps } from 'vue';
+    import { useNotification } from '@kyvg/vue3-notification';
+
+    const { notify } = useNotification();
 
     const { modelValue, label } = defineProps({
         modelValue: {
@@ -36,6 +39,16 @@
     const toggleCheckbox = event => {
         emit('update:modelValue', event.target.checked);
     };
+    function addNotification() {
+        const id = Date.now();
+        notify({
+            id,
+            type: 'success',
+            title: `Переход на страницу "Политики конфиденциальности"`,
+            duration: 2000,
+        });
+        return false;
+    }
 </script>
 
 <style lang="css" scoped>

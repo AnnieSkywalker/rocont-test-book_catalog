@@ -54,7 +54,7 @@
             id,
             type: 'delete',
             title: 'Книга удалена',
-            duration: 4000,
+            duration: 2000,
         });
         return store.dispatch('books/removeBook', book);
     }

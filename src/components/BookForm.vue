@@ -147,7 +147,7 @@
                 id,
                 type: 'error',
                 title: 'Книга не добавлена',
-                duration: 5000,
+                duration: 4000,
             });
             return;
         }
@@ -157,7 +157,7 @@
                 id,
                 type: 'error',
                 title: 'Книга не добавлена',
-                duration: 5000,
+                duration: 4000,
             });
             return;
         }
@@ -168,7 +168,7 @@
             id,
             type: 'success',
             title: 'Добавление книги',
-            duration: 4000,
+            duration: 2000,
         });
         book = {
             title: '',
