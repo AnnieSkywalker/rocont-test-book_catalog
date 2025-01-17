@@ -5,8 +5,18 @@
                 class="my-notification"
                 :class="props.item.type"
             >
-                <MyIconDocClose v-if="props.item.type == 'error'"></MyIconDocClose>
-                <MyIconCheck v-else-if="props.item.type == 'success'"></MyIconCheck>
+                <MyIconDocClose
+                    class="icon-note"
+                    v-if="props.item.type == 'error'"
+                ></MyIconDocClose>
+                <MyIconCheck
+                    class="icon-note"
+                    v-else-if="props.item.type == 'success'"
+                ></MyIconCheck>
+                <MyIconRemove
+                    class="icon-note"
+                    v-else-if="props.item.type == 'delete'"
+                ></MyIconRemove>
                 <p class="my-notification-title">
                     {{ props.item.title }}
                 </p>
@@ -17,9 +27,10 @@
 </template>
 
 <script setup>
+    import MyIconCheck from '../icon/MyIconCheck.vue';
     import MyIconCloseNote from '../icon/MyIconCloseNote.vue';
     import MyIconDocClose from '../icon/MyIconDocClose.vue';
-    import MyIconCheck from '../icon/MyIconCheck.vue';
+    import MyIconRemove from '../icon/MyIconRemove.vue';
 </script>
 
 <style lang="css">
@@ -44,6 +55,7 @@
     .my-notification {
         display: flex;
         flex-direction: row;
+        justify-content: center;
         align-items: center;
         gap: 16px;
         margin: 0 0 8px;
@@ -56,7 +68,8 @@
         line-height: 24px;
         color: var(--text-notification);
     }
-    .my-notification.success {
+    .my-notification.success,
+    .my-notification.delete {
         background-color: var(--notification-success);
     }
 

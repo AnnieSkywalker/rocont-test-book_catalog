@@ -41,6 +41,15 @@
     </svg>
 </template>
 <style>
+    .icon-note .icon-base__g path {
+        stroke: var(--white-color);
+    }
+    svg.icon-note:hover .icon-base__g path {
+        stroke: var(--white-color);
+    }
+    svg.icon-note:active .icon-base__g path {
+        stroke: var(--white-color);
+    }
     svg {
         cursor: pointer;
     }

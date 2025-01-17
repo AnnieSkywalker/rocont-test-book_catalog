@@ -6,10 +6,17 @@
                 <p class="book__author">{{ book.author }}</p>
                 <p class="book__year">{{ book.publication_year }}</p>
                 <p
+                    v-if="Array.isArray(book.genre)"
                     class="book__genre"
                     v-for="genre in book.genre"
                 >
                     {{ genre }}
+                </p>
+                <p
+                    class="book__genre"
+                    v-else
+                >
+                    {{ book.genre }}
                 </p>
             </div>
         </div>
@@ -22,8 +29,10 @@
 <script setup>
     import { computed, defineProps } from 'vue';
     import MyIconRemove from './icon/MyIconRemove.vue';
+    import { useNotification } from '@kyvg/vue3-notification';
     import { useStore } from 'vuex';
 
+    const { notify } = useNotification();
     const store = useStore();
 
     const books = computed(() => store.state.books.books);
@@ -40,6 +49,13 @@
         },
     });
     function removeBook(book) {
+        const id = Date.now();
+        notify({
+            id,
+            type: 'delete',
+            title: 'Книга удалена',
+            duration: 4000,
+        });
         return store.dispatch('books/removeBook', book);
     }
 </script>
